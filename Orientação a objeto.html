@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<head>
+    
+</head>
+<body>
+
+    <div id="exemplo"></div>
+
+    <script type="text/javascript">
+
+class Elevador {
+        constructor(andarAtual, Totalandares, capacidade, Npesoas) {
+            this.andarAtual = andarAtual;
+            this.Totalandares = 10;
+            this.capaciade = capacidade;
+            this.Npessoas = 7; 
+        }
+
+        Entrar(){
+            if(this.capacidade == this.Npessoas ){
+                console.log("Elevador cheio")
+            }
+            else{
+                this.Npessoas = this.Npessoas + 1;
+            console.log('O elevador tem ' + this.Npessoas +' pessoas.');
+            }
+        }
+        Sair(){
+            if(this.Npessoas == 0 ){
+                console.log("O elevador está vazio")
+            }
+            else{
+                this.Npessoas = this.Npessoas - 1;
+            console.log('O elevador tem ' + this.Npessoas +' pessoas.');
+            }
+        }
+        Subi(){
+            if(this.andarAtual == this.Totalandares ){
+                console.log("Ultimo andar")
+            }
+            else{
+                this.andarAtual = this.andarAtual + 1;
+            console.log('O elevador esta no ' + this.andarAtual +' andar.');
+            }
+        }
+        Desce(){
+            if(this.andarAtual == 0 ){
+                console.log("Térreo")
+            }
+            else{
+                this.andarAtual = this.andarAtual - 1;
+            console.log('O elevador esta no ' + this.andarAtual +' andar.');
+            }
+        }
+    }
+
+    var elevado = new Elevador ('0', '10', '6', '0')
+    
+    elevado.Desce()
+    elevado.Sair()
+   
+
+</script>
+
+</body>
+</html>
